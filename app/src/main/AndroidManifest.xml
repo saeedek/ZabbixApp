@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vodafone.zabbixapp" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ZabbixApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="vfzbx.com"
+                    android:pathPrefix="/"
+                    android:scheme="http" >
+                </data>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.HostGroupsActivity"
+            android:label="@string/title_activity_host_groups"
+            android:parentActivityName=".activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vodafone.zabbixapp.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.HostsActivity"
+            android:label="@string/title_activity_hosts"
+            android:parentActivityName=".activities.HostGroupsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vodafone.zabbixapp.activities.HostGroupsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ScriptsActivity"
+            android:label="@string/title_activity_scripts"
+            android:parentActivityName=".activities.HostsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vodafone.zabbixapp.activities.HostsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ScriptDetailActivity"
+            android:label="@string/title_activity_script_detail"
+            android:parentActivityName=".activities.ScriptsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vodafone.zabbixapp.activities.ScriptsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:parentActivityName=".activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vodafone.zabbixapp.activities.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

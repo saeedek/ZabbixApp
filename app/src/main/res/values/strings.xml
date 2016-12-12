@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ZabbixApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_host_groups">Host Groups</string>
+    <string name="title_activity_hosts">Hosts Page</string>
+    <string name="title_activity_scripts">Scripts Page</string>
+    <string name="title_activity_script_detail">Script Detail</string>
+    <string name="title_activity_setting">Settings</string>
+</resources>
